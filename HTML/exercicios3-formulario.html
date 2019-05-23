@@ -7,21 +7,52 @@
         <title> Formulario </title>
     </head>
     <body>
-        <form>
+        <form class="container" onsubmit="enviarFormulario()">
             <table> 
                 <tr>
-                    <th colspan="3"> FORMULARIO </th>                            
+                    <th class="title" colspan="2"> FORMULARIO </th>
                 </tr>
                 <tr>
-                    <td> Nome:<input type="text"> </td>
+                    <td> Nome: </td>
+					<td> <input id="nome" type="text"> </td>
                 </tr>
                 <tr>
-                    <td> Email:<input type="text"> </td>
+                    <td> Email: </td>
+					<td> <input id="email" type="text"> </td>
                 </tr>
                 <tr>
-                    <td> Telefone:<input type="text"> </td>
+                    <td> Telefone: </td>
+					<td> <input id="telefone" type="text"> </td>
                 </tr>                    
-            </table>
+				<tr>
+					<td colspan="2"> Descrição: </td>
+				</tr>
+				<tr>
+					<td colspan="2"> 
+						<textarea id="descricao" class="desc-tabela" rows="4"> </textarea>
+					</td>
+				</tr>
+				<tr>
+					<td class="last-td" colspan="3">
+						<input type="submit" value="Enviar">
+					</td>
+				</tr>
+			</table>
         </form>
+		<script>		
+			function enviarFormulario(){
+				var nome = document.getElementById('nome').value;
+				var email = document.getElementById('email').value;
+				var telefone = document.getElementById('telefone').value;
+				var descricao = document.getElementById('descricao').value;
+				
+				alert("Formulário enviado!\n" +
+						"\nNome: " + nome +
+						"\nEmail: " + email +
+						"\nTelefone: " + telefone +
+						"\nDescrição: " + descricao
+						);
+			}
+		</script>
     </body>
 </html>
