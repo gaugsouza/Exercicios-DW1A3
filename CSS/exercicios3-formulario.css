@@ -17,7 +17,8 @@ table {
 }
 th, td{
 	padding-right: 10px;
-	padding-left: 10px;
+    padding-left: 10px;
+    display:block;
 }
 th.title{
 	font-size: 30px;

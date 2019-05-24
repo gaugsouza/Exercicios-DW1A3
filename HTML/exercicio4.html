@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="../CSS/exercicios4.css">
+        <title> IMC </title>
+    </head>
+    <body>
+        <form class="container" onsubmit="calcular()">
+            <table> 
+                <tr>
+                    <th class="title" colspan="3"> IMC </th>
+                </tr>
+                <tr>
+                    <td class="body">Altura</td>
+                    <td><input id="altura" class="text" type="text"></td>
+                    <td class="body">m</td>
+                </tr>
+                <tr>
+                    <td class="body"> Peso </td>
+                    <td> <input id="peso" class="text" type="text"> </td>
+                    <td class="body"> kg </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" class="button" value="Calcular">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script>		
+			function calcular(){
+				var altura = document.getElementById('altura').value;
+				var peso = document.getElementById('peso').value;
+				
+				alert("Formulário enviado!\n");
+			}
+		</script>
+    </body>
+</html>
